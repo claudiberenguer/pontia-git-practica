@@ -1,0 +1,17 @@
+name: workflow manual parte 6
+
+on:
+  workflow_dispatch:
+    inputs:
+      texto_para_imprimir:
+        description: 'un texto para imprimir'
+        required: true
+        default': 'si no lo modificas saldrá esto que estás leyendo'
+
+jobs:
+  imprime_texto:
+    runs-on: ubuntu-latest
+    steps:
+      - name: imprime la entrada
+        run: echo "${{ github.event.inputs.texto_para_imprimir }}"
+
