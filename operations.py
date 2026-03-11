@@ -1,2 +1,2 @@
 def info():
-    return "Operacios básicas"
+    return "Operaciones básicas"
